@@ -1,5 +1,5 @@
 $(document).ready(function() {
- 
+
   $("#display").click(function() {
     $("#display").blur();
   });
@@ -28,11 +28,11 @@ $(".button").click(function() {
   else
     {
       expression += key;
-      
+
       $("#display").val(expression);
-    
+
     }//end if key not equal
-  
+
 }); //end click
-  
+
   });//end ready
