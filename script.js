@@ -14,6 +14,7 @@ $(document).ready(function() {
     if(key == 'AC')
     {
       $('input').val("");
+      expression = "";
     }
     else if(key == 'CE')
     {
