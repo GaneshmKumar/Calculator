@@ -1,51 +1,81 @@
-/*
-* @Author: GaNeShKuMaRm
-* @Date:   2017-05-14 19:01:15
-* @Last Modified by:   GaNeShKuMaRm
-* @Last Modified time: 2017-05-14 19:01:27
-*/
 
+@import url('https://fonts.googleapis.com/css?family=Vibur|Lobster');
+.buttons {
+  font-family: 'Lobster', sans-serif;
+}
 #calculator {
-  border: solid 1px white;
-  border-radius: 10px;
-  padding: 20px 20px 20px 20px;
+  position: relative;
 }
 
-.button{
-  width: 70px;
-  cursor: pointer;
-  font-family: product sans;
-  font-weight: bold;
-  margin-top: 2px;
- }
-.textbox {
- width: 293px !important;
-  background: white !important;
+input {
   text-align: right;
+  font-size: 30px !important;
+  color: #fafafa !important;
+  height: 80px !important;
+  border-radius: 0 !important;
+  background-color: #202833 !important;
+  border-color: #202333 !important;
 }
 
-#equal {
-  width: 143px;
-}
-#title {
-  color: white;
+#calculator-inner {
+  position: absolute;
+  top: 35px;
   text-align: center;
-  url(http://fonts.googleapis.com/css?family=Oleo+Script);
-  font-weight: bold;
+  background: #616161;
+}
+
+.ac, .ce {
+  padding: 15px 15px !important;
+}
+
+.num, .dot, .equal{
+  background: #202833;
+}
+
+.operator {
+  background: #19bd9b;
 
 }
 
-#main {
-  background: #212121;
-  border: solid 1px black;
-  width: 380px;
-  padding: 20px 20px 20px 20px;
-  border-radius: 20px;
-  margin: 100px auto;
-  display: block;
+.ac {
+  background: #616161;
+}
+.ce {
+  background: #ff4436;
 }
 
-#display:focus {
-  outline: none;
+
+.buttons div {
+  color: #ffffff;
+  border: solid 1px transparent;
+  padding: 33px 10px;
+  font-size: 20px;
+  transition: ease-in-out 0.2s;
 }
 
+.buttons div:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.footer {
+  background: #414141;
+  padding: 10px 10px;
+}
+
+.footer {
+ font-family: 'Vibur', cursive; 
+  color: #ffffff;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #fafafa;
+  transition: linear 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #212121;
+}

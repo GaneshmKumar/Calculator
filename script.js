@@ -7,40 +7,37 @@
 
 'use strict';
 $(document).ready(function() {
-
-  $("#display").click(function() {
-    $("#display").blur();
-  });
   var expression = "";
-$(".button").click(function() {
-  var key = $(this).attr("value");
-  if(key === "AC")
-    {
-      $("#display").val('');
-      expression = "";
-    }
-  else if(key === "CE")
-    {
-      if(expression !== "")
-        {
-      expression = expression.slice(0,-1);
-      $("#display").val(expression);
-          }
-    }
-  else if(key === "=")
-    {
-      var result = eval(expression);
-      $("#display").val(result);
-      expression = "";
-    }
-  else
-    {
-      expression += key;
-
-      $("#display").val(expression);
+  $(".buttons div").on('click', function() {
     //alert(expression);
-    }//end if key not equal
-
-}); //end click
-
-  });//end ready
+    var key = $(this).text();
+    if(key == 'AC')
+    {
+      $('input').val("");
+    }
+    else if(key == 'CE')
+    {
+      if(expression.length == 1)
+        expression = "";
+      else
+        expression = expression.slice(0, expression.length - 1);
+      $('input').val(expression);
+    }
+    else if(key == '=')
+    { 
+      var result = eval(expression);
+      $('input').val(result);
+      expression = result;
+    }
+    else
+    {
+      if($(this).attr('id') == 'mul')
+        expression += '*'
+      else if($(this).attr('id') == 'div')
+        expression += '/';
+      else
+        expression += key;
+      $('input').val(expression);
+    }
+  });
+});
