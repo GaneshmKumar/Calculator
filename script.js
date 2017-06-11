@@ -9,7 +9,6 @@
 $(document).ready(function() {
   var expression = "";
   $(".buttons div").on('click', function() {
-    //alert(expression);
     var key = $(this).text();
     if(key == 'AC')
     {
@@ -28,7 +27,7 @@ $(document).ready(function() {
     { 
       var result = eval(expression);
       $('input').val(result);
-      expression = result;
+      expression = result.toString();
     }
     else
     {
