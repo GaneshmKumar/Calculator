@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Vibur|Lobster');
 .buttons {
-  font-family: 'Lobster', sans-serif;
+  font-family: 'Vibur', sans-serif;
 }
 #calculator {
   position: relative;
@@ -64,7 +64,7 @@ input {
 }
 
 .footer {
- font-family: 'Vibur', cursive; 
+ font-family: 'Vibur', sans-serif; 
   color: #ffffff;
   font-size: 15px;
 }
